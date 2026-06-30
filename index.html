@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta (spec §13) -->
+  <title>Pratham Kairamkonda – Backend &amp; AI/ML Engineer | India</title>
+  <meta name="description"
+    content="Portfolio of Pratham Kairamkonda — backend and AI/ML engineer building local LLM pipelines, RAG systems, and production backends for enterprise pharma software. Based in Hyderabad, India.">
+  <meta name="author" content="Pratham Kairamkonda">
+  <meta property="og:title" content="Pratham Kairamkonda – Backend &amp; AI/ML Engineer">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="og-image.jpg">
+  <meta name="geo.placename" content="Hyderabad, Telangana, India">
+  <meta name="theme-color" content="#0D0B1F">
+
+  <!-- Favicon (Inline SVG) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D0B1F'/><text x='50' y='65' font-family='sans-serif' font-weight='bold' font-size='48' fill='%239DC700' text-anchor='middle'>PK.</text></svg>">
+
+  <!-- Google Fonts (spec §1) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&family=Syne:wght@800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Fixed background canvas/grid layer, z-index:0 (spec §3) -->
+  <div id="bgc"></div>
+
+  <!-- Custom cursor dot + ring (spec §4.1) -->
+  <div id="cd"></div>
+  <div id="cr"></div>
+
+  <!-- Top scroll-progress bar (spec §4.2) -->
+  <div id="pb"></div>
+
+  <!-- Navigation (spec §4.3) -->
+  <nav>
+    <a href="#hero" class="nav-logo">PK.</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#proj-wrap">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#homelab">Homelab</a>
+      <button type="button" class="nav-doc-link" data-doc="resume" data-doc-url="resume.pdf"
+        data-doc-title="Pratham Kairamkonda — Resume">Resume</button>
+    </div>
+    <a href="#contact" class="nav-cta">Contact Me</a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Fullscreen mobile menu (spec §4.3) -->
+  <div class="mmenu">
+    <a href="#about" class="mmenu-link">About</a>
+    <a href="#proj-wrap" class="mmenu-link">Projects</a>
+    <a href="#skills" class="mmenu-link">Skills</a>
+    <a href="#experience" class="mmenu-link">Experience</a>
+    <button type="button" class="mmenu-link mmenu-doc-link" data-doc="resume" data-doc-url="resume.pdf"
+      data-doc-title="Pratham Kairamkonda — Resume">Resume</button>
+    <a href="#contact" class="mmenu-link">Contact Me</a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HERO (spec §5) -->
+  <!-- ============================================================ -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <!-- Left column: name + text + buttons -->
+      <div class="hero-text">
+        <div class="hero-name">
+          <div class="name-clip"><span class="nl nl1">PRATHAM</span></div>
+          <div class="name-clip"><span class="nl nl2">KAIRAMKONDA</span></div>
+          <div class="name-clip"><span class="nl nl3">Builds intelligent systems</span></div>
+        </div>
+        <p class="hero-sub">From <strong>local LLM pipelines and backend APIs</strong> to production-grade enterprise
+          systems – I build things end-to-end, across the stack, and I've been doing that long enough to know what
+          actually works.</p>
+        <div class="hero-btns">
+          <a href="#proj-wrap" class="btn-pri">See My Work</a>
+          <a href="#contact" class="btn-sec">Get in touch ↗</a>
+        </div>
+      </div>
+
+      <!-- Right column: orbit scene -->
+      <div class="hero-orbit-wrap">
+        <span class="orbit-label">BUILDS</span>
+        <div class="orbit-scene">
+          <!-- Pulsing center glow -->
+          <div class="orbit-center"></div>
+          <!-- 3 concentric rotating guide rings -->
+          <div class="or or1"></div>
+          <div class="or or2"></div>
+          <div class="or or3"></div>
+
+          <!-- Inner ring: 4 pills, 18s orbit, radius 70px -->
+          <div class="kw-pill" style="--angle:0deg;--r:70px;animation-duration:18s;background:#9DC700">Python</div>
+          <div class="kw-pill" style="--angle:90deg;--r:70px;animation-duration:18s;background:#D63868">Django</div>
+          <div class="kw-pill" style="--angle:180deg;--r:70px;animation-duration:18s;background:#00A8B8">FastAPI</div>
+          <div class="kw-pill" style="--angle:270deg;--r:70px;animation-duration:18s;background:#D4B200">React</div>
+
+          <!-- Mid ring: 5 pills, 26s orbit, radius 115px -->
+          <div class="kw-pill" style="--angle:0deg;--r:115px;animation-duration:26s;background:#8B68D4">SQL</div>
+          <div class="kw-pill" style="--angle:72deg;--r:115px;animation-duration:26s;background:#00B878">LangChain</div>
+          <div class="kw-pill" style="--angle:144deg;--r:115px;animation-duration:26s;background:#9DC700">LangGraph
+          </div>
+          <div class="kw-pill" style="--angle:216deg;--r:115px;animation-duration:26s;background:#D63868">RAG</div>
+          <div class="kw-pill" style="--angle:288deg;--r:115px;animation-duration:26s;background:#00A8B8">LLMs</div>
+
+          <!-- Outer ring: 5 pills, 34s orbit, radius 155px -->
+          <div class="kw-pill" style="--angle:0deg;--r:155px;animation-duration:34s;background:#D4B200">PyTorch</div>
+          <div class="kw-pill" style="--angle:72deg;--r:155px;animation-duration:34s;background:#8B68D4">Docker</div>
+          <div class="kw-pill" style="--angle:144deg;--r:155px;animation-duration:34s;background:#00B878">Microservices
+          </div>
+          <div class="kw-pill" style="--angle:216deg;--r:155px;animation-duration:34s;background:#9DC700">Vector DB
+          </div>
+          <div class="kw-pill" style="--angle:288deg;--r:155px;animation-duration:34s;background:#D63868">Prompt
+            Engineering</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-ind">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- ABOUT (spec §6) — Chapter I -->
+  <!-- ============================================================ -->
+  <section id="about" aria-label="About Me">
+    <div class="about-inner">
+      <!-- Left column: text content -->
+      <div class="about-text">
+        <div class="chapter-label rv">Chapter I — Who I Am</div>
+        <h2 class="about-heading rv" data-d="1">Backend, AI/ML, full-stack – <span class="hl">built end-to-end.</span>
+        </h2>
+        <p class="about-p rv" data-d="2">I build complete systems – not just pieces of them. <strong>Backend designed,
+            database optimized, APIs shipped, AI pipeline running, deployed end-to-end.</strong> That's the difference
+          between a prototype and something that actually works in production.</p>
+        <p class="about-p rv" data-d="2">My work spans <strong>local LLM inference, RAG pipelines, and multi-agent
+            systems</strong> as much as it covers enterprise Django/SQL backends and full-stack web. I've shipped inside
+          a live pharma-grade LIMS used by Cipla, Lupin, Dr. Reddy's, and Biocon — and I build offline AI tools on my
+          own hardware for the fun of pushing what's possible without a GPU farm.</p>
+
+        <div class="about-chips rv" data-d="3">
+          <span class="chip cy">Local LLM Inference</span>
+          <span class="chip pk">RAG Pipelines</span>
+          <span class="chip lm">Multi-Agent Systems</span>
+          <span class="chip wh">Django/SQL</span>
+          <span class="chip cy">Computer Vision</span>
+          <span class="chip lm">Offline-First AI</span>
+        </div>
+
+        <div class="evolution-row rv" data-d="4">
+          <span class="es-label">Expanding Stack</span>
+          <span class="es-step">Backend</span>
+          <span class="es-arrow">→</span>
+          <span class="es-step">Full-Stack</span>
+          <span class="es-arrow">→</span>
+          <span class="es-step">AI/ML</span>
+          <span class="es-arrow">→</span>
+          <span class="es-step now">Agent Systems</span>
+        </div>
+      </div>
+
+      <!-- Right column: stats cards -->
+      <div class="about-stats">
+        <div class="stat-card rv">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Internships – enterprise pharma backend + applied ML research</div>
+        </div>
+        <div class="stat-card rv" data-d="1">
+          <div class="stat-num">91%</div>
+          <div class="stat-label">OCR accuracy achieved on a from-scratch Telugu pipeline</div>
+        </div>
+        <div class="stat-card rv" data-d="2">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Students using a tool I built and shipped, officially recommended by my university's
+            IT dept.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- PROJECTS (spec §7) — Chapter II — NOT a <section> -->
+  <!-- ============================================================ -->
+  <div id="proj-wrap">
+    <div id="proj-sticky">
+      <!-- HUD top bar -->
+      <div class="proj-hud">
+        <div class="phud-left">
+          <span class="phud-chapter">Chapter II</span>
+          <span class="phud-title">Sanjaya</span>
+        </div>
+        <div class="phud-right">
+          <div class="phud-dots">
+            <span class="phud-dot on"></span>
+            <span class="phud-dot"></span>
+            <span class="phud-dot"></span>
+            <span class="phud-dot"></span>
+            <span class="phud-dot"></span>
+          </div>
+          <span class="phud-counter">01</span>
+        </div>
+      </div>
+
+      <!-- Cards Area -->
+      <div class="cards-area">
+        <!-- Project 01: Sanjaya -->
+        <div class="pcard p1 active">
+          <div class="cwm">01</div>
+          <div class="pcl">
+            <div>
+              <div class="pc-num">PROJECT 01</div>
+              <h3 class="pc-title">Sanjaya</h3>
+              <div class="pc-type">AI Surveillance Engine</div>
+              <p class="pc-one-liner">A multi-modal AI system that turns live video into searchable text — no months of
+                raw footage to store.</p>
+            </div>
+            <div class="pc-img-box">
+              <img src="assets/Project-1.png" alt="Sanjaya System Architecture" class="pc-img" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
+                <span>[ Sanjaya System Architecture ]</span>
+              </div>
+            </div>
+            <a href="https://github.com/prathamm-k/sanjaya" target="_blank" rel="noopener noreferrer"
+              class="pc-btn">View Project ↗</a>
+          </div>
+          <div class="pcr">
+            <div>
+              <span class="pcr-label">What it does</span>
+              <p class="pcr-desc">Sanjaya is a surveillance pipeline that uses <strong>vision-language models and
+                  computer vision</strong> to convert live video streams into queryable semantic text logs. Instead of
+                storing raw footage, it stores meaning — enabling fast retrieval across 2+ years of activity from a
+                vector database, not a hard drive.</p>
+            </div>
+            <div>
+              <span class="pcr-label">Key Features</span>
+              <ul class="pcr-features">
+                <li>VLM + CV pipeline converting video into structured semantic logs</li>
+                <li>Vector database-backed retrieval across long-term historical activity</li>
+                <li>Real-time RAG interface exposed over a FastAPI REST API</li>
+                <li>On-demand security summaries delivered via Telegram</li>
+              </ul>
+            </div>
+            <div>
+              <span class="pcr-label">Tech Stack</span>
+              <div class="pcr-chips">
+                <span class="pcr-chip">Python</span>
+                <span class="pcr-chip">FastAPI</span>
+                <span class="pcr-chip">React</span>
+                <span class="pcr-chip">llama.cpp</span>
+                <span class="pcr-chip">VLMs</span>
+                <span class="pcr-chip">Vector DB</span>
+              </div>
+            </div>
+            <div class="pcr-why">
+              <span class="pcr-label">Why it matters</span>
+              <p class="pcr-why-text"><strong>Storage doesn't scale, understanding does.</strong> Sanjaya was built to
+                prove that surveillance systems can be smart about what they keep.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 02: VocalNote -->
+        <div class="pcard p2 future">
+          <div class="pcl">
+            <div>
+              <div class="cwm">02</div>
+              <div class="pc-num">PROJECT 02</div>
+              <h3 class="pc-title">VocalNote</h3>
+              <div class="pc-type">AI PDF-to-Podcast Converter</div>
+              <p class="pc-one-liner">Turns any PDF into a narrated podcast, fully offline — no cloud, no GPU required.
+              </p>
+            </div>
+            <div class="pc-img-box">
+              <img src="assets/Project-2.png" alt="VocalNote Pipeline Layout" class="pc-img" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
+                <span>[ VocalNote Pipeline Layout ]</span>
+              </div>
+            </div>
+            <a href="https://github.com/prathamm-k/vocalnote" target="_blank" rel="noopener noreferrer"
+              class="pc-btn">View Project ↗</a>
+          </div>
+          <div class="pcr">
+            <div>
+              <span class="pcr-label">What it does</span>
+              <p class="pcr-desc">VocalNote is an end-to-end pipeline that converts PDFs into natural-sounding audio
+                using <strong>local LLM inference and Kokoro TTS</strong> — entirely on-device. Officially recommended
+                by my university's IT department, it was adopted by 200+ students within two weeks of release.</p>
+            </div>
+            <div>
+              <span class="pcr-label">Key Features</span>
+              <ul class="pcr-features">
+                <li>Fully offline pipeline — zero cloud calls, zero API costs</li>
+                <li>Local LLM inference + prompt engineering for natural narration structure</li>
+                <li>Real-time audio generation optimized for consumer hardware, no GPU needed</li>
+                <li>Adopted university-wide within 2 weeks of launch</li>
+              </ul>
+            </div>
+            <div>
+              <span class="pcr-label">Tech Stack</span>
+              <div class="pcr-chips">
+                <span class="pcr-chip">Python</span>
+                <span class="pcr-chip">FastAPI</span>
+                <span class="pcr-chip">React</span>
+                <span class="pcr-chip">Kokoro TTS</span>
+                <span class="pcr-chip">llama.cpp</span>
+              </div>
+            </div>
+            <div class="pcr-why">
+              <span class="pcr-label">Why it matters</span>
+              <p class="pcr-why-text"><strong>Good tools get adopted, not announced.</strong> 200+ students started
+                using this without me pushing it — that's the only metric that matters.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 03: CodeLab -->
+        <div class="pcard p3 future">
+          <div class="pcl">
+            <div>
+              <div class="cwm">03</div>
+              <div class="pc-num">PROJECT 03</div>
+              <h3 class="pc-title">CodeLab</h3>
+              <div class="pc-type">Real-Time Collaborative Code Editor</div>
+              <p class="pc-one-liner">A shared coding room where you and your team write and run Python together, live.
+              </p>
+            </div>
+            <div class="pc-img-box">
+              <img src="assets/Project-3.png" alt="CodeLab Workspace Interface" class="pc-img" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
+                <span>[ CodeLab Workspace Interface ]</span>
+              </div>
+            </div>
+            <a href="https://github.com/prathamm-k/CodeLab-Collaborative-Code-Editor" target="_blank"
+              rel="noopener noreferrer" class="pc-btn">View Project ↗</a>
+          </div>
+          <div class="pcr">
+            <div>
+              <span class="pcr-label">What it does</span>
+              <p class="pcr-desc">CodeLab lets multiple people code together in a shared virtual room with
+                <strong>real-time synchronization</strong> powered by Socket.IO. Built with React and CodeMirror, it
+                supports live Python execution, syntax highlighting, and user presence — built for pair programming and
+                teaching sessions without screen-sharing friction.
+              </p>
+            </div>
+            <div>
+              <span class="pcr-label">Key Features</span>
+              <ul class="pcr-features">
+                <li>Real-time code sync across multiple users in shared rooms</li>
+                <li>Live Python execution with an output panel, right in the browser</li>
+                <li>User presence indicators with avatars</li>
+                <li>Download code as .py files, one click</li>
+              </ul>
+            </div>
+            <div>
+              <span class="pcr-label">Tech Stack</span>
+              <div class="pcr-chips">
+                <span class="pcr-chip">React</span>
+                <span class="pcr-chip">Node.js</span>
+                <span class="pcr-chip">Express</span>
+                <span class="pcr-chip">Socket.IO</span>
+                <span class="pcr-chip">CodeMirror</span>
+              </div>
+            </div>
+            <div class="pcr-why">
+              <span class="pcr-label">Why it matters</span>
+              <p class="pcr-why-text"><strong>Pair programming shouldn't need a screen-share.</strong> CodeLab was built
+                to make collaborative coding feel native, not bolted on.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 04: Chandamama Kathalu -->
+        <div class="pcard p4 future">
+          <div class="pcl">
+            <div>
+              <div class="cwm">04</div>
+              <div class="pc-num">PROJECT 04</div>
+              <h3 class="pc-title">Chandamama Kathalu</h3>
+              <div class="pc-type">Telugu OCR + Fine-Tuned LM</div>
+              <p class="pc-one-liner">A from-scratch OCR + LLM pipeline built to make Telugu content digitally
+                accessible for 5M+ native speakers.</p>
+            </div>
+            <div class="pc-img-box">
+              <img src="assets/Project-4.png" alt="Telugu OCR Pipeline" class="pc-img" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
+                <span>[ Telugu OCR Pipeline ]</span>
+              </div>
+            </div>
+            <a href="https://github.com/prathamm-k/chandamama-kathalu" target="_blank" rel="noopener noreferrer"
+              class="pc-btn">View Project ↗</a>
+          </div>
+          <div class="pcr">
+            <div>
+              <span class="pcr-label">What it does</span>
+              <p class="pcr-desc">Built during my ML internship at Swecha, this project pairs a <strong>computer vision
+                  + NLP OCR pipeline</strong> (hitting 91% character accuracy) with Chandamama Kathalu, a fine-tuned
+                Telugu language model. Together they digitized 10,000+ archival documents and expanded digital
+                accessibility for a massively underserved language community.</p>
+            </div>
+            <div>
+              <span class="pcr-label">Key Features</span>
+              <ul class="pcr-features">
+                <li>Telugu OCR pipeline using Tesseract + OpenCV, 91% character accuracy</li>
+                <li>30% faster throughput over baseline OCR approaches</li>
+                <li>10,000+ archival documents digitized</li>
+                <li>Co-developed fine-tuned Telugu LLM, Chandamama Kathalu, for 5M+ native speakers</li>
+              </ul>
+            </div>
+            <div>
+              <span class="pcr-label">Tech Stack</span>
+              <div class="pcr-chips">
+                <span class="pcr-chip">Python</span>
+                <span class="pcr-chip">Tesseract</span>
+                <span class="pcr-chip">OpenCV</span>
+                <span class="pcr-chip">NLP</span>
+                <span class="pcr-chip">Fine-Tuning</span>
+              </div>
+            </div>
+            <div class="pcr-why">
+              <span class="pcr-label">Why it matters</span>
+              <p class="pcr-why-text"><strong>Most AI tooling ignores low-resource languages.</strong> This was built to
+                close that gap for Telugu, not work around it.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 05: Belirix -->
+        <div class="pcard p5 future">
+          <div class="pcl">
+            <div>
+              <div class="cwm">05</div>
+              <div class="pc-num">PROJECT 05</div>
+              <h3 class="pc-title">Belirix</h3>
+              <div class="pc-type">Offline Industrial AI Assistant</div>
+              <p class="pc-one-liner">A local-first conversational vision assistant that helps hardware technicians
+                troubleshoot equipment — no internet required.</p>
+            </div>
+            <div class="pc-img-box">
+              <img src="assets/Project-5.png" alt="Belirix Edge Device Deployment" class="pc-img" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
+                <span>[ Belirix Edge Device Deployment ]</span>
+              </div>
+            </div>
+            <a href="https://github.com/prathamm-k/belirix" target="_blank" rel="noopener noreferrer"
+              class="pc-btn">View Project ↗</a>
+          </div>
+          <div class="pcr">
+            <div>
+              <span class="pcr-label">What it does</span>
+              <p class="pcr-desc">Belirix is an offline image-recognition chatbot built for hardware technicians at BHEL
+                Hyderabad. It runs a quantized vision-language model entirely on local hardware, letting technicians
+                point a camera at equipment and get conversational, context-aware troubleshooting help — even on a
+                factory floor with no internet access.</p>
+            </div>
+            <div>
+              <span class="pcr-label">Key Features</span>
+              <ul class="pcr-features">
+                <li>Fully offline VLM inference via llama-server, zero cloud dependency</li>
+                <li>Real-time conversational interface over server-sent events (SSE streaming)</li>
+                <li>Single-container deployment — Docker + Nginx + Supervisord</li>
+                <li>Built for industrial environments where connectivity can't be assumed</li>
+              </ul>
+            </div>
+            <div>
+              <span class="pcr-label">Tech Stack</span>
+              <div class="pcr-chips">
+                <span class="pcr-chip">MiniCPM-V</span>
+                <span class="pcr-chip">FastAPI</span>
+                <span class="pcr-chip">React</span>
+                <span class="pcr-chip">Docker</span>
+                <span class="pcr-chip">Nginx</span>
+              </div>
+            </div>
+            <div class="pcr-why">
+              <span class="pcr-label">Why it matters</span>
+              <p class="pcr-why-text"><strong>Industrial AI can't depend on a Wi-Fi signal.</strong> Belirix proves a
+                capable vision assistant can run entirely on the edge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- SKILLS (spec §8) — Chapter III -->
+  <!-- ============================================================ -->
+  <section id="skills" aria-label="Skills">
+    <div class="chapter-label rv" style="color:var(--mint)">Chapter III — Skill Stack</div>
+    <h2 class="skills-heading rv" data-d="1">Skill <em>Stack</em></h2>
+    <div class="skills-grid">
+      <!-- Languages Card -->
+      <div class="sk-card sk-lime rv" data-d="1">
+        <h3 class="sk-title">Languages I Know</h3>
+        <div class="sk-pills">
+          <span class="sk-pill sk-languages">Python</span>
+          <span class="sk-pill sk-languages">Java</span>
+          <span class="sk-pill sk-languages">C</span>
+          <span class="sk-pill sk-languages">JavaScript</span>
+          <span class="sk-pill sk-languages">SQL</span>
+          <span class="sk-pill sk-languages">Bash/PowerShell</span>
+        </div>
+      </div>
+      <!-- Frameworks Card -->
+      <div class="sk-card sk-pink rv" data-d="2">
+        <h3 class="sk-title">Frameworks &amp; Web</h3>
+        <div class="sk-pills">
+          <span class="sk-pill sk-frameworks">Django</span>
+          <span class="sk-pill sk-frameworks">FastAPI</span>
+          <span class="sk-pill sk-frameworks">React.js</span>
+          <span class="sk-pill sk-frameworks">Spring Boot</span>
+          <span class="sk-pill sk-frameworks">Streamlit</span>
+          <span class="sk-pill sk-frameworks">n8n</span>
+          <span class="sk-pill sk-frameworks">WebSockets</span>
+          <span class="sk-pill sk-frameworks">REST APIs</span>
+          <span class="sk-pill sk-frameworks">Microservices</span>
+        </div>
+      </div>
+      <!-- AI/ML Card -->
+      <div class="sk-card sk-cyan rv" data-d="3">
+        <h3 class="sk-title">AI/ML &amp; Tools</h3>
+        <div class="sk-pills">
+          <span class="sk-pill sk-ai">PyTorch</span>
+          <span class="sk-pill sk-ai">TensorFlow</span>
+          <span class="sk-pill sk-ai">OpenCV</span>
+          <span class="sk-pill sk-ai">LangChain</span>
+          <span class="sk-pill sk-ai">LangGraph</span>
+          <span class="sk-pill sk-ai">RAG</span>
+          <span class="sk-pill sk-ai">LLMs</span>
+          <span class="sk-pill sk-ai">Vector Databases</span>
+          <span class="sk-pill sk-ai">Transformers</span>
+          <span class="sk-pill sk-ai">LLM Quantization</span>
+          <span class="sk-pill sk-ai">Fine-Tuning</span>
+          <span class="sk-pill sk-ai">Hugging Face</span>
+          <span class="sk-pill sk-ai">Docker</span>
+          <span class="sk-pill sk-ai">Git</span>
+          <span class="sk-pill sk-ai">CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- EXPERIENCE (spec §9) — Chapter IV -->
+  <!-- ============================================================ -->
+  <section id="experience" aria-label="Experience">
+    <div class="chapter-label rv" style="color:var(--volt)">Chapter IV — Work Experience</div>
+    <h2 class="exp-heading rv" data-d="1">Work <span style="color: var(--volt);">Experience</span></h2>
+    <div class="exp-list">
+      <!-- Card 1 -->
+      <div class="exp-card rv" data-d="1">
+        <div class="exp-header">
+          <div class="exp-title-block">
+            <h3 class="exp-role">Trainee Consultant (Intern)</h3>
+            <span class="exp-company proven">ProvenTech (an NTT Data Company)</span>
+          </div>
+          <span class="exp-date">Jan 2026 – Apr 2026</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Resolved <strong>20+ backend bugs</strong> across 3 Django REST API and microservices modules in a
+            <strong>live enterprise LIMS</strong> serving Cipla, Lupin, Dr. Reddy's, and Biocon, sustaining stability of
+            critical manufacturing integrations.
+          </li>
+          <li>Authored <strong>10+ optimized SQL queries</strong>, <strong>cutting average retrieval time by
+              ~30%</strong>; cleaned 25+ duplicate/rogue entries across SQL and MongoDB stores, improving accuracy for
+            live pharma reporting pipelines.</li>
+        </ul>
+        <div class="exp-chips">
+          <span class="exp-chip proventech">Django</span>
+          <span class="exp-chip proventech">REST APIs</span>
+          <span class="exp-chip proventech">Microservices</span>
+          <span class="exp-chip proventech">SQL</span>
+          <span class="exp-chip proventech">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="exp-card rv" data-d="2">
+        <div class="exp-header">
+          <div class="exp-title-block">
+            <h3 class="exp-role">Machine Learning Intern</h3>
+            <span class="exp-company swecha">Swecha</span>
+          </div>
+          <span class="exp-date">Jul 2024 – Oct 2024</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built a <strong>computer vision and NLP Telugu OCR pipeline</strong> (Python, Tesseract, OpenCV) hitting
+            <strong>91% character accuracy</strong> and 30% faster throughput; digitized 10,000+ archival documents.
+          </li>
+          <li>Co-developed <strong>Chandamama Kathalu</strong>, a fine-tuned Telugu LLM expanding digital accessibility
+            for 5M+ native speakers.</li>
+        </ul>
+        <div class="exp-chips">
+          <span class="exp-chip swecha">Python</span>
+          <span class="exp-chip swecha">Tesseract</span>
+          <span class="exp-chip swecha">OpenCV</span>
+          <span class="exp-chip swecha">NLP</span>
+          <span class="exp-chip swecha">Fine-Tuning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- EDUCATION & CERTIFICATIONS (spec §10) — Chapter V -->
+  <!-- ============================================================ -->
+  <section id="education" aria-label="Education and Certifications">
+    <div class="chapter-label rv" style="color:var(--lav)">Chapter V — Education &amp; Certifications</div>
+    <h2 class="edu-heading rv" data-d="1">Education &amp; <span style="color:var(--pink);">Certifications</span></h2>
+
+    <!-- Top row: 3 education cards -->
+    <div class="edu-row">
+      <div class="edu-card rv" data-d="1">
+        <span class="edu-icon">🎓</span>
+        <div class="edu-tier">DEGREE</div>
+        <h3 class="edu-degree">B.Tech in Information Technology</h3>
+        <div class="edu-institution">Anurag University, Hyderabad</div>
+        <div class="edu-details">2022 – 2026 · CGPA: 7.6/10</div>
+      </div>
+      <div class="edu-card rv" data-d="2">
+        <span class="edu-icon">📚</span>
+        <div class="edu-tier">INTERMEDIATE</div>
+        <h3 class="edu-degree">PCM</h3>
+        <div class="edu-institution">FIITJEE Limited, Saifabad, Hyderabad · 2022</div>
+        <div class="edu-details">65.3%</div>
+      </div>
+      <div class="edu-card rv" data-d="3">
+        <span class="edu-icon">🏫</span>
+        <div class="edu-tier">CLASS 10</div>
+        <h3 class="edu-degree">I.C.S.E. Board</h3>
+        <div class="edu-institution">St. Joseph's School, Habsiguda, Hyderabad · 2020</div>
+        <div class="edu-details">76.2%</div>
+      </div>
+    </div>
+
+    <!-- Certifications sub-section -->
+    <div class="cc-sub-label rv" data-d="1">— CERTIFICATIONS</div>
+    <div class="cert-grid">
+      <!-- Java Full Stack -->
+      <div class="cc-card rv" data-d="1">
+        <span class="cc-icon" style="background:var(--cyan)"></span>
+        <div class="cc-body">
+          <h4 class="cc-title">Java Full Stack</h4>
+          <div class="cc-issuer">Wipro TalentNext · 2025</div>
+          <a href="certificates/J_250150161_K_Pratham.pdf" target="_blank" rel="noopener noreferrer"
+            class="cc-link doc-viewer-link" data-doc-title="Java Full Stack — Wipro TalentNext">↗ View Certificate</a>
+        </div>
+      </div>
+      <!-- CCNA -->
+      <div class="cc-card rv" data-d="2">
+        <span class="cc-icon" style="background:var(--lime)"></span>
+        <div class="cc-body">
+          <h4 class="cc-title">CCNA 1–3</h4>
+          <div class="cc-issuer">Cisco · 2025</div>
+          <div class="cc-links-row">
+            <span>View:</span>
+            <a href="certificates/certificate-CCNA-1.pdf" target="_blank" rel="noopener noreferrer"
+              class="doc-viewer-link" data-doc-title="CCNA 1 — Cisco">Part 1 ↗</a>
+            <a href="certificates/certificate-CCNA-2.pdf" target="_blank" rel="noopener noreferrer"
+              class="doc-viewer-link" data-doc-title="CCNA 2 — Cisco">Part 2 ↗</a>
+            <a href="certificates/certificate-CCNA-3.pdf" target="_blank" rel="noopener noreferrer"
+              class="doc-viewer-link" data-doc-title="CCNA 3 — Cisco">Part 3 ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- Python Essentials -->
+      <div class="cc-card rv" data-d="3">
+        <span class="cc-icon" style="background:var(--volt)"></span>
+        <div class="cc-body">
+          <h4 class="cc-title">Python Essentials 1 &amp; 2</h4>
+          <div class="cc-issuer">Cisco/Python Institute · 2025</div>
+          <div class="cc-links-row">
+            <span>View:</span>
+            <a href="certificates/certificate-python-essentials-1.pdf" target="_blank" rel="noopener noreferrer"
+              class="doc-viewer-link" data-doc-title="Python Essentials 1 — Python Institute">Part 1 ↗</a>
+            <a href="certificates/certificate-python-essentials-2.pdf" target="_blank" rel="noopener noreferrer"
+              class="doc-viewer-link" data-doc-title="Python Essentials 2 — Python Institute">Part 2 ↗</a>
+          </div>
+        </div>
+      </div>
+      <!-- ML Crash Course -->
+      <div class="cc-card rv" data-d="4">
+        <span class="cc-icon" style="background:var(--pink)"></span>
+        <div class="cc-body">
+          <h4 class="cc-title">ML Crash Course</h4>
+          <div class="cc-issuer">Google · 2024</div>
+          <!-- No link, static card -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- HOMELAB (spec §10.5) — Chapter VI -->
+  <!-- ============================================================ -->
+  <section id="homelab" aria-label="Homelab">
+    <div class="chapter-label rv" style="color:var(--cyan)">Chapter VI — Homelab</div>
+    <h2 class="edu-heading rv" data-d="1">Self-Hosted <span style="color:var(--cyan);">Infrastructure</span></h2>
+    <p class="hl-sub rv" data-d="2">A few services I run and maintain myself, tunnelled through Cloudflare from a
+      machine on my desk. Status below is checked live from your browser when this page loads.</p>
+
+    <div class="hl-row">
+      <!-- Jellyfin -->
+      <a href="https://jellyfin.prathamm.dpdns.org" target="_blank" rel="noopener noreferrer"
+        class="hl-card rv" data-d="1" data-hl-check="https://jellyfin.prathamm.dpdns.org/health">
+        <div class="hl-top">
+          <span class="hl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3 3 19h18L12 3Z" stroke="var(--cyan)" stroke-width="1.6" stroke-linejoin="round" />
+              <circle cx="12" cy="15" r="1.6" fill="var(--cyan)" />
+            </svg>
+          </span>
+          <span class="hl-status" data-hl-status="jellyfin">
+            <span class="hl-dot"></span>
+            <span class="hl-status-text">Checking…</span>
+          </span>
+        </div>
+        <div class="hl-tier">MEDIA SERVER</div>
+        <h3 class="hl-name">Jellyfin</h3>
+        <div class="hl-desc">Personal media library — movies, shows, and music streamed from my own hardware.</div>
+        <div class="hl-url">jellyfin.prathamm.dpdns.org</div>
+      </a>
+
+      <!-- n8n -->
+      <a href="https://n8n.prathamm.dpdns.org" target="_blank" rel="noopener noreferrer"
+        class="hl-card rv" data-d="2" data-hl-check="https://n8n.prathamm.dpdns.org/healthz">
+        <div class="hl-top">
+          <span class="hl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="5" cy="6" r="2.2" stroke="var(--cyan)" stroke-width="1.6" />
+              <circle cx="19" cy="12" r="2.2" stroke="var(--cyan)" stroke-width="1.6" />
+              <circle cx="5" cy="18" r="2.2" stroke="var(--cyan)" stroke-width="1.6" />
+              <path d="M7 6.8 17 11.3M7 17.2 17 12.7" stroke="var(--cyan)" stroke-width="1.6"
+                stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="hl-status" data-hl-status="n8n">
+            <span class="hl-dot"></span>
+            <span class="hl-status-text">Checking…</span>
+          </span>
+        </div>
+        <div class="hl-tier">AUTOMATION</div>
+        <h3 class="hl-name">n8n</h3>
+        <div class="hl-desc">Workflow automation engine — runs scheduled jobs and connects the other tools I build.
+        </div>
+        <div class="hl-url">n8n.prathamm.dpdns.org</div>
+      </a>
+
+      <!-- Pending slot -->
+      <div class="hl-card hl-pending rv" data-d="3">
+        <div class="hl-top">
+          <span class="hl-icon hl-icon-pending" aria-hidden="true">+</span>
+        </div>
+        <div class="hl-tier">IN PROGRESS</div>
+        <h3 class="hl-name">More on the way</h3>
+        <div class="hl-desc">This chapter is still being written — more self-hosted services are coming online as
+          the homelab grows.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
+  <!-- CONTACT (spec §11) — Chapter VII -->
+  <!-- ============================================================ -->
+  <section id="contact">
+    <div class="ct-wm">PK.</div>
+    <div class="contact-layout">
+      <!-- Left side: info -->
+      <div class="contact-info">
+        <div class="chapter-label rv" style="color:var(--pink)">Chapter VII — Let's Talk</div>
+        <h2 class="contact-heading rv" data-d="1">Let's <span class="lime">build</span> something</h2>
+        <p class="contact-sub rv" data-d="2">Whether it's an internship, a full-time role, or a conversation about local
+          LLMs and offline-first AI — inbox is open.</p>
+        <p class="contact-body rv" data-d="2">Looking for backend and AI/ML engineering roles where I can own systems
+          end-to-end — RAG pipelines, agent systems, production backends, all of it. If you're building something that
+          needs that kind of ownership, let's talk.</p>
+      </div>
+
+      <!-- Right side: contact rows -->
+      <div class="contact-list">
+        <a href="mailto:kairamkondapratham@gmail.com" class="ctl-row rv" data-d="1">
+          <span class="ctl-label">EMAIL</span>
+          <span class="ctl-value">kairamkondapratham@gmail.com</span>
+          <span class="ctl-arrow">↗</span>
+        </a>
+        <a href="https://linkedin.com/in/pratham-kairamkonda" target="_blank" rel="noopener noreferrer"
+          class="ctl-row rv" data-d="2">
+          <span class="ctl-label">LINKEDIN</span>
+          <span class="ctl-value">linkedin.com/in/pratham-kairamkonda</span>
+          <span class="ctl-arrow">↗</span>
+        </a>
+        <a href="https://github.com/prathamm-k" target="_blank" rel="noopener noreferrer" class="ctl-row rv" data-d="3">
+          <span class="ctl-label">GITHUB</span>
+          <span class="ctl-value">github.com/prathamm-k</span>
+          <span class="ctl-arrow">↗</span>
+        </a>
+        <a href="tel:+918019401626" class="ctl-row rv" data-d="4">
+          <span class="ctl-label">PHONE</span>
+          <span class="ctl-value">+91 8019401626</span>
+          <span class="ctl-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer row -->
+    <div class="footer">
+      <div class="footer-left">Pratham Kairamkonda · <span style="color:var(--lime);">Hyderabad, India</span> · 2026
+      </div>
+      <div class="footer-right">Made to be <span style="color:var(--lime);">remembered</span> – thanks for stopping by.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- DOCUMENT VIEWER MODAL — Resume / Certificates -->
+  <!-- ============================================================ -->
+  <div class="doc-modal" id="doc-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="doc-modal-title">
+    <div class="doc-modal-backdrop" data-doc-close></div>
+    <div class="doc-modal-card">
+      <div class="doc-modal-head">
+        <span class="doc-modal-title" id="doc-modal-title">Document</span>
+        <div class="doc-modal-actions">
+          <a class="doc-modal-download" id="doc-modal-download" href="#" download>Download ↓</a>
+          <button type="button" class="doc-modal-close" data-doc-close aria-label="Close">×</button>
+        </div>
+      </div>
+      <div class="doc-modal-body">
+        <iframe id="doc-modal-frame" class="doc-modal-frame" title="Document preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
