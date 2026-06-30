@@ -1,3 +1,4 @@
 *.md
 test_res
 .Dockerignore
+.DS_Store

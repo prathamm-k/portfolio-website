@@ -1236,6 +1236,18 @@ nav.on {
   box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
+.pc-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+ 
+.pc-btn-row .pc-btn {
+  margin-top: 0;
+}
+
 /* Right Column (.pcr) */
 .pcr {
   padding: clamp(1.5rem, 2.5vw, 2.5rem);
