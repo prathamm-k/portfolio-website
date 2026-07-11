@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta -->
+  <title>All Projects — Pratham Kairamkonda</title>
+  <meta name="description"
+    content="Every project by Pratham Kairamkonda — local LLM pipelines, RAG systems, computer vision, and full-stack builds, all self-hosted and live.">
+  <meta name="author" content="Pratham Kairamkonda">
+  <meta property="og:title" content="All Projects — Pratham Kairamkonda">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta name="theme-color" content="#0D0B1F">
+
+  <!-- Favicon (Inline SVG) — identical to index.html -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D0B1F'/><text x='50' y='65' font-family='sans-serif' font-weight='bold' font-size='48' fill='%239DC700' text-anchor='middle'>PK.</text></svg>">
+
+  <!-- Google Fonts — identical set to index.html -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&family=Syne:wght@800&display=swap"
+    rel="stylesheet">
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Fixed background layer -->
+  <div id="bgc"></div>
+
+  <!-- Custom cursor dot + ring -->
+  <div id="cd"></div>
+  <div id="cr"></div>
+
+  <!-- Top scroll-progress bar -->
+  <div id="pb"></div>
+
+  <!-- Navigation — links point back to index.html sections; "All Projects" is active -->
+  <nav>
+    <a href="index.html#hero" class="nav-logo">PK.</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#proj-wrap">Projects</a>
+      <a href="/projects" class="nav-all-proj active">All Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#homelab">Homelab</a>
+      <button type="button" class="nav-doc-link" data-doc="resume" data-doc-url="resume.pdf"
+        data-doc-title="Pratham Kairamkonda — Resume">Resume</button>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Contact Me</a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Fullscreen mobile menu -->
+  <div class="mmenu">
+    <a href="index.html#about" class="mmenu-link">About</a>
+    <a href="index.html#proj-wrap" class="mmenu-link">Projects</a>
+    <a href="/projects" class="mmenu-link">All Projects</a>
+    <a href="index.html#skills" class="mmenu-link">Skills</a>
+    <a href="index.html#experience" class="mmenu-link">Experience</a>
+    <button type="button" class="mmenu-link mmenu-doc-link" data-doc="resume" data-doc-url="resume.pdf"
+      data-doc-title="Pratham Kairamkonda — Resume">Resume</button>
+    <a href="index.html#contact" class="mmenu-link">Contact Me</a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ALL PROJECTS -->
+  <!-- ============================================================ -->
+  <section id="all-projects" aria-label="All Projects">
+    <a href="index.html#proj-wrap" class="ap-back rv">← Back to portfolio</a>
+    <div class="chapter-label rv" style="color:var(--lime)">The Full Index — Everything I've Built</div>
+    <h1 class="ap-heading rv" data-d="1">All <span>Projects</span></h1>
+    <p class="ap-sub rv" data-d="2">The complete set — every project lives on my self-hosted laptop-server and is
+      containerized with Docker, so a demo may take a moment to wake up or occasionally stumble under shared load. If a
+      Live Demo is unreachable, give it a second and retry, or jump straight to the source on GitHub.</p>
+
+    <div class="ap-grid">
+
+      <!-- ============================================================
+           PROJECT BLOCK TEMPLATE — copy one .proj-card to add a project.
+           - Update: image src/alt, PROJECT NN, .proj-name, .proj-type,
+             .proj-desc, .proj-chip list, and the two link hrefs.
+           - Both links open in a new tab, exactly like the project chapter.
+           ============================================================ -->
+
+      <!-- Project 01: Sanjaya -->
+      <div class="proj-card rv">
+        <div class="proj-card-img">
+          <img src="assets/Project-1-Sanjaya.png" alt="Sanjaya System Architecture" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="proj-card-ph" style="display:none;">[ Sanjaya ]</div>
+        </div>
+        <div class="proj-card-top">
+          <span class="proj-num">PROJECT 01</span>
+          <span class="proj-badge">AI · Computer Vision</span>
+        </div>
+        <h3 class="proj-name">Sanjaya</h3>
+        <div class="proj-type">AI Surveillance Engine</div>
+        <p class="proj-desc">A multi-modal AI system that turns live video into searchable semantic text — vision-language
+          models store meaning, not months of raw footage, with real-time RAG retrieval over a vector database.</p>
+        <div class="proj-chips">
+          <span class="proj-chip">Python</span>
+          <span class="proj-chip">FastAPI</span>
+          <span class="proj-chip">React</span>
+          <span class="proj-chip">llama.cpp</span>
+          <span class="proj-chip">VLMs</span>
+          <span class="proj-chip">Vector DB</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://prathamm.dpdns.org/projects/sanjaya" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/prathamm-k/Sanjaya" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-ghost">GitHub Repo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 02: VocalNote -->
+      <div class="proj-card rv">
+        <div class="proj-card-img">
+          <img src="assets/Project-2.png" alt="VocalNote Pipeline Layout" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="proj-card-ph" style="display:none;">[ VocalNote ]</div>
+        </div>
+        <div class="proj-card-top">
+          <span class="proj-num">PROJECT 02</span>
+          <span class="proj-badge">AI · Offline-First</span>
+        </div>
+        <h3 class="proj-name">VocalNote</h3>
+        <div class="proj-type">AI PDF-to-Podcast Converter</div>
+        <p class="proj-desc">Turns any PDF into a natural-sounding narrated podcast, fully offline via local LLM inference
+          and Kokoro TTS — no cloud, no GPU. Officially recommended by my university and adopted by 200+ students in two
+          weeks.</p>
+        <div class="proj-chips">
+          <span class="proj-chip">Python</span>
+          <span class="proj-chip">FastAPI</span>
+          <span class="proj-chip">React</span>
+          <span class="proj-chip">Kokoro TTS</span>
+          <span class="proj-chip">llama.cpp</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://prathamm.dpdns.org/projects/vocalnote/" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/prathamm-k/VocalNote" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-ghost">GitHub Repo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 03: CodeLab -->
+      <div class="proj-card rv">
+        <div class="proj-card-img">
+          <img src="assets/Project-3-CodeLab.png" alt="CodeLab Workspace Interface" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="proj-card-ph" style="display:none;">[ CodeLab ]</div>
+        </div>
+        <div class="proj-card-top">
+          <span class="proj-num">PROJECT 03</span>
+          <span class="proj-badge">Full-Stack · Real-Time</span>
+        </div>
+        <h3 class="proj-name">CodeLab</h3>
+        <div class="proj-type">Real-Time Collaborative Code Editor</div>
+        <p class="proj-desc">A shared coding room where a team writes and runs Python together, live — real-time sync over
+          Socket.IO, in-browser execution, user presence, and one-click .py export. Pair programming without the
+          screen-share.</p>
+        <div class="proj-chips">
+          <span class="proj-chip">React</span>
+          <span class="proj-chip">Node.js</span>
+          <span class="proj-chip">Express</span>
+          <span class="proj-chip">Socket.IO</span>
+          <span class="proj-chip">CodeMirror</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://prathamm.dpdns.org/projects/codelab/" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/prathamm-k/CodeLab-Collaborative-Code-Editor" target="_blank"
+            rel="noopener noreferrer" class="proj-btn proj-btn-ghost">GitHub Repo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 04: Telugu-OCR Pipeline -->
+      <div class="proj-card rv">
+        <div class="proj-card-img">
+          <img src="assets/Project-4-Telugu-OCR.png" alt="Telugu OCR Pipeline" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="proj-card-ph" style="display:none;">[ Telugu-OCR ]</div>
+        </div>
+        <div class="proj-card-top">
+          <span class="proj-num">PROJECT 04</span>
+          <span class="proj-badge">AI · NLP</span>
+        </div>
+        <h3 class="proj-name">Telugu-OCR Pipeline</h3>
+        <div class="proj-type">Telugu OCR + Fine-Tuned LM</div>
+        <p class="proj-desc">A from-scratch OCR + NLP pipeline (91% character accuracy, 30% faster throughput) paired with
+          a fine-tuned Telugu LLM. Built during my Swecha internship, it digitized 10,000+ archival documents for 5M+
+          native speakers.</p>
+        <div class="proj-chips">
+          <span class="proj-chip">Python</span>
+          <span class="proj-chip">Tesseract</span>
+          <span class="proj-chip">OpenCV</span>
+          <span class="proj-chip">NLP</span>
+          <span class="proj-chip">Fine-Tuning</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://prathamm.dpdns.org/projects/telugu-ocr" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/prathamm-k/Telugu-OCR" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-ghost">GitHub Repo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 05: Belirix -->
+      <div class="proj-card rv">
+        <div class="proj-card-img">
+          <img src="assets/Project-5-Belirix.png" alt="Belirix Edge Device Deployment" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="proj-card-ph" style="display:none;">[ Belirix ]</div>
+        </div>
+        <div class="proj-card-top">
+          <span class="proj-num">PROJECT 05</span>
+          <span class="proj-badge">AI · Edge / Offline</span>
+        </div>
+        <h3 class="proj-name">Belirix</h3>
+        <div class="proj-type">Offline Industrial AI Assistant</div>
+        <p class="proj-desc">A local-first conversational vision assistant for hardware technicians at BHEL Hyderabad —
+          a quantized VLM runs entirely on-device so technicians can point a camera at equipment and get context-aware
+          troubleshooting with no internet.</p>
+        <div class="proj-chips">
+          <span class="proj-chip">MiniCPM-V4.6</span>
+          <span class="proj-chip">FastAPI</span>
+          <span class="proj-chip">React</span>
+          <span class="proj-chip">Docker</span>
+          <span class="proj-chip">Nginx</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://prathamm.dpdns.org/projects/belirix/" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/prathamm-k/Belirix" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-ghost">GitHub Repo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 06: Sutravak -->
+      <div class="proj-card rv">
+        <div class="proj-card-img">
+          <img src="assets/Project-6-Sutravak.png" alt="Sutravak" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="proj-card-ph" style="display:none;">[ Sutravak ]</div>
+        </div>
+        <div class="proj-card-top">
+          <span class="proj-num">PROJECT 06</span>
+          <span class="proj-badge">AI · Edge / Offline</span>
+        </div>
+        <h3 class="proj-name">Sutravak</h3>
+        <div class="proj-type">Production Grade AI Voiceovers Generation</div>
+        <p class="proj-desc">Sutravak is a locally-hosted, privacy-focused full-stack web application designed for content creators, historians, and educators to generate production-grade AI voiceovers for history narration and documentary-style videos.</p>
+        <div class="proj-chips">
+          <span class="proj-chip">ChatterBox-TTS</span>
+          <span class="proj-chip">FastAPI</span>
+          <span class="proj-chip">React</span>
+          <span class="proj-chip">Docker</span>
+          <span class="proj-chip">Nginx</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://prathamm.dpdns.org/projects/sutravak/" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/prathamm-k/Sutravak" target="_blank" rel="noopener noreferrer"
+            class="proj-btn proj-btn-ghost">GitHub Repo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 06: Sutravak — write-up in progress (details intentionally
+           not filled in; replace this soon-card with a full .proj-card above
+           once the project is documented). -->
+      <div class="proj-card proj-card-soon rv">
+        <span class="proj-num">PROJECT 07</span>
+        <h3 class="proj-name">Project - 7</h3>
+        <p class="proj-desc">Full write-up in progress — this project is being documented and will land here soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer — mirrors index.html footer -->
+  <div class="footer">
+    <div class="footer-left">Pratham Kairamkonda · <span style="color:var(--lime);">Hyderabad, India</span> · 2026</div>
+    <div class="footer-right">Made to be <span style="color:var(--lime);">remembered</span> — thanks for stopping by.
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- DOCUMENT VIEWER MODAL — Resume (shared with index.html) -->
+  <!-- ============================================================ -->
+  <div class="doc-modal" id="doc-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="doc-modal-title">
+    <div class="doc-modal-backdrop" data-doc-close></div>
+    <div class="doc-modal-card">
+      <div class="doc-modal-head">
+        <span class="doc-modal-title" id="doc-modal-title">Document</span>
+        <div class="doc-modal-actions">
+          <a class="doc-modal-download" id="doc-modal-download" href="#" download>Download ↓</a>
+          <button type="button" class="doc-modal-close" data-doc-close aria-label="Close">×</button>
+        </div>
+      </div>
+      <div class="doc-modal-body">
+        <iframe id="doc-modal-frame" class="doc-modal-frame" title="Document preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared script -->
+  <script src="script.js"></script>
+</body>
+
+</html>

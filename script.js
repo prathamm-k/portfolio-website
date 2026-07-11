@@ -165,7 +165,7 @@
       "Sanjaya",
       "VocalNote",
       "CodeLab",
-      "Chandamama Kathalu",
+      "Telugu-OCR for Chandamama Kathalu",
       "Belirix"
     ];
 

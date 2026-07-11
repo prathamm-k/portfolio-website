@@ -2458,3 +2458,421 @@ nav.on {
     display: none !important;
   }
 }
+
+/* ===================================================================
+   "All Projects" nav link — the one cross-page link in the bar
+   =================================================================== */
+.nav-links a.nav-all-proj {
+  color: var(--lime);
+}
+
+.nav-links a.nav-all-proj::after {
+  background: var(--lime);
+}
+
+/* Active page state (used on projects.html) */
+.nav-links a.nav-all-proj.active,
+.nav-links a.active {
+  color: var(--w);
+}
+
+.nav-links a.nav-all-proj.active::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ===================================================================
+   INFRASTRUCTURE NOTE — advisory band above the Projects chapter
+   Amber/volt accent = "heads-up", matching the site's token palette.
+   =================================================================== */
+#infra-note {
+  padding: clamp(3.5rem, 7vh, 5.5rem) clamp(1.5rem, 4vw, 3rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.note-card {
+  background: linear-gradient(180deg, rgba(212, 178, 0, .05), rgba(245, 242, 236, .02));
+  border: 1.5px solid var(--wdd);
+  border-left: 4px solid var(--volt);
+  border-radius: 16px;
+  padding: clamp(1.6rem, 3.2vw, 2.6rem);
+}
+
+.note-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.note-badge {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--bg);
+  background: var(--volt);
+  padding: .3rem .7rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 rgba(212, 178, 0, .3);
+}
+
+.note-label {
+  margin: 0;
+  color: var(--volt);
+}
+
+.note-heading {
+  font-family: var(--head);
+  font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: var(--w);
+  margin-bottom: 1.2rem;
+}
+
+.note-hl {
+  color: var(--volt);
+  font-style: italic;
+}
+
+.note-p {
+  font-size: clamp(.9rem, 1.1vw, 1rem);
+  line-height: 1.7;
+  color: var(--wm);
+  max-width: 900px;
+  margin-bottom: 1.4rem;
+}
+
+.note-p strong {
+  color: var(--w);
+  font-weight: 500;
+}
+
+.note-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-bottom: 1.6rem;
+}
+
+.note-spec {
+  font-family: var(--mono);
+  font-size: clamp(.7rem, .85vw, .78rem);
+  color: var(--w);
+  background: rgba(245, 242, 236, .04);
+  border: 1px solid var(--wdd);
+  border-radius: 6px;
+  padding: .4rem .8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.note-spec .ns-k {
+  color: var(--volt);
+  font-weight: 500;
+  letter-spacing: .06em;
+}
+
+.note-urls {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-bottom: 1.6rem;
+}
+
+.note-url {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .6rem;
+  font-family: var(--mono);
+  font-size: clamp(.72rem, .9vw, .82rem);
+}
+
+.note-url .nu-k {
+  color: var(--wd);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  min-width: 130px;
+}
+
+.note-url .nu-v {
+  color: var(--cyan);
+  word-break: break-word;
+}
+
+.note-foot {
+  font-family: var(--jak);
+  font-weight: 500;
+  font-size: clamp(.85rem, 1vw, .95rem);
+  line-height: 1.6;
+  color: var(--wm);
+  border-top: 1px solid var(--wdd);
+  padding-top: 1.3rem;
+  max-width: 900px;
+}
+
+/* ===================================================================
+   ALL PROJECTS PAGE (projects.html)
+   Card grid modeled on the Education "edu-card" block so new projects
+   are added by copy-pasting one .proj-card. Follows index.html theme.
+   =================================================================== */
+#all-projects {
+  padding: clamp(7rem, 13vh, 9rem) clamp(1.5rem, 4vw, 3rem) clamp(4rem, 8vh, 6rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.ap-heading {
+  font-family: var(--head);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  color: var(--w);
+  margin-bottom: 1rem;
+}
+
+.ap-heading span {
+  color: var(--lime);
+}
+
+.ap-sub {
+  font-family: var(--jak);
+  font-weight: 500;
+  font-size: clamp(.95rem, 1.2vw, 1.08rem);
+  color: var(--wm);
+  max-width: 680px;
+  line-height: 1.6;
+  margin-bottom: clamp(2.2rem, 4.5vh, 3rem);
+}
+
+.ap-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--mono);
+  font-size: .82rem;
+  color: var(--wm);
+  margin-bottom: 1.4rem;
+  cursor: none;
+  transition: color .2s var(--ease), transform .2s var(--ease);
+}
+
+.ap-back:hover {
+  color: var(--lime);
+  transform: translateX(-3px);
+}
+
+.ap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.proj-card {
+  background: var(--wdd);
+  border: 1.5px solid var(--wdd);
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+
+.proj-card.rv:hover {
+  border-color: var(--lime);
+  transform: translateY(-5px);
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, .35);
+}
+
+.proj-card-img {
+  height: clamp(150px, 20vh, 200px);
+  border: 1.5px solid var(--wdd);
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  background: rgba(13, 11, 31, .3);
+  flex-shrink: 0;
+}
+
+.proj-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.proj-card-ph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--wd);
+}
+
+.proj-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .7rem;
+}
+
+.proj-num {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  color: var(--lime);
+}
+
+.proj-badge {
+  font-family: var(--mono);
+  font-size: .68rem;
+  color: var(--wm);
+  background: rgba(245, 242, 236, .04);
+  border: 1px solid var(--wdd);
+  padding: .25rem .6rem;
+  border-radius: 100px;
+}
+
+.proj-name {
+  font-family: var(--head);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 800;
+  color: var(--w);
+  line-height: 1.1;
+  margin-bottom: .4rem;
+}
+
+.proj-type {
+  font-family: var(--jak);
+  font-weight: 600;
+  font-size: clamp(.82rem, 1vw, .9rem);
+  color: var(--lime);
+  margin-bottom: .8rem;
+}
+
+.proj-desc {
+  font-size: clamp(.86rem, 1.05vw, .93rem);
+  line-height: 1.6;
+  color: var(--wm);
+  margin-bottom: 1.1rem;
+}
+
+.proj-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-bottom: 1.4rem;
+}
+
+.proj-chip {
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--wm);
+  background: rgba(245, 242, 236, .04);
+  border: 1px solid var(--wdd);
+  padding: .25rem .6rem;
+  border-radius: 4px;
+}
+
+.proj-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: auto;
+}
+
+.proj-btn {
+  font-family: var(--mono);
+  font-size: .78rem;
+  font-weight: 500;
+  padding: .55rem 1.1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: none;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease);
+}
+
+.proj-btn-primary {
+  color: var(--bg);
+  background: var(--lime);
+  box-shadow: 3px 3px 0 rgba(157, 199, 0, .3);
+}
+
+.proj-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 5px 0 rgba(157, 199, 0, .4);
+}
+
+.proj-btn-ghost {
+  color: var(--wm);
+  border: 1.5px solid var(--wd);
+  background: transparent;
+}
+
+.proj-btn-ghost:hover {
+  color: var(--lime);
+  border-color: var(--lime);
+  transform: translateY(-2px);
+}
+
+/* Placeholder card for projects still being documented */
+.proj-card.proj-card-soon {
+  border-style: dashed;
+  border-color: rgba(245, 242, 236, .18);
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 260px;
+}
+
+.proj-card.proj-card-soon:hover {
+  border-color: rgba(245, 242, 236, .32);
+  transform: none;
+  box-shadow: none;
+}
+
+.proj-card-soon .proj-name {
+  color: var(--wm);
+}
+
+.proj-card-soon .proj-desc {
+  margin-bottom: 0;
+}
+
+/* Projects page responsive */
+@media (max-width: 780px) {
+  .ap-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  #all-projects {
+    padding: clamp(6rem, 12vh, 7rem) clamp(1rem, 4vw, 2rem) clamp(3rem, 6vh, 4rem);
+  }
+
+  .note-url .nu-k {
+    min-width: auto;
+  }
+}

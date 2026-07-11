@@ -50,6 +50,7 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#proj-wrap">Projects</a>
+      <a href="/projects" class="nav-all-proj">All Projects</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#homelab">Homelab</a>
@@ -66,6 +67,7 @@
   <div class="mmenu">
     <a href="#about" class="mmenu-link">About</a>
     <a href="#proj-wrap" class="mmenu-link">Projects</a>
+    <a href="/projects" class="mmenu-link">All Projects</a>
     <a href="#skills" class="mmenu-link">Skills</a>
     <a href="#experience" class="mmenu-link">Experience</a>
     <button type="button" class="mmenu-link mmenu-doc-link" data-doc="resume" data-doc-url="resume.pdf"
@@ -206,6 +208,48 @@
   <div class="rdiv"></div>
 
   <!-- ============================================================ -->
+  <!-- INFRASTRUCTURE NOTE — read before exploring the projects -->
+  <!-- ============================================================ -->
+  <section id="infra-note" aria-label="A note on infrastructure">
+    <div class="note-card rv">
+      <div class="note-head">
+        <span class="note-badge">⚡ Heads-up</span>
+        <div class="chapter-label note-label">Before You Explore — Honest Infrastructure</div>
+      </div>
+      <h2 class="note-heading rv" data-d="1">Everything here runs on <span class="note-hl">one retired laptop.</span></h2>
+
+      <p class="note-p rv" data-d="2">This whole portfolio and every live project are self-hosted on a single old
+        laptop I pulled out of retirement and turned into a home server. Every project is containerized with Docker and
+        shares the <strong>same modest hardware at the same time</strong> — so if a demo loads slowly, restarts
+        mid-request, or occasionally misbehaves, that's the shared resources talking, not the code. I'd rather show you
+        real, running systems on honest hardware than polished screenshots, and I hope you'll bear with the occasional
+        hiccup that comes with it.</p>
+
+      <div class="note-specs rv" data-d="2">
+        <span class="note-spec"><span class="ns-k">CPU</span> Intel i5 · 10th Gen</span>
+        <span class="note-spec"><span class="ns-k">RAM</span> 16 GB</span>
+        <span class="note-spec"><span class="ns-k">GPU</span> GTX 1650 · 4 GB VRAM</span>
+        <span class="note-spec"><span class="ns-k">RUNTIME</span> Docker · laptop-server</span>
+      </div>
+
+      <p class="note-p rv" data-d="3">The domain is free too — claimed through <strong>OceanGate's dpdns service</strong>
+        and wired up through Cloudflare's DNS. There's no paid infrastructure anywhere in this stack; it's all
+        bootstrapped, tunneled, and maintained by hand.</p>
+
+      <div class="note-urls rv" data-d="3">
+        <div class="note-url"><span class="nu-k">Homelab services</span><span class="nu-v">&lt;service&gt;.prathamm.dpdns.org</span></div>
+        <div class="note-url"><span class="nu-k">Live projects</span><span class="nu-v">prathamm.dpdns.org/projects/&lt;project-name&gt;</span></div>
+      </div>
+
+      <p class="note-foot rv" data-d="4">A few services spin down when idle to free up memory, so the first request can
+        take a few seconds to wake up. If something's unreachable, give it a moment and retry — or jump straight to the
+        source on GitHub. This is a solo, self-funded labour of love, built and run end-to-end by one person.</p>
+    </div>
+  </section>
+
+  <div class="rdiv"></div>
+
+  <!-- ============================================================ -->
   <!-- PROJECTS (spec §7) — Chapter II — NOT a <section> -->
   <!-- ============================================================ -->
   <div id="proj-wrap">
@@ -242,16 +286,16 @@
                 raw footage to store.</p>
             </div>
             <div class="pc-img-box">
-              <img src="assets/Project-1.png" alt="Sanjaya System Architecture" class="pc-img" loading="lazy"
+              <img src="assets/Project-1-Sanjaya.png" alt="Sanjaya System Architecture" class="pc-img" loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
                 <span>[ Sanjaya System Architecture ]</span>
               </div>
             </div>
             <div class="pc-btn-row">
-              <a href="https://github.com/prathamm-k" target="_blank" rel="noopener noreferrer" class="pc-btn">GitHub
+              <a href="https://github.com/prathamm-k/Sanjaya" target="_blank" rel="noopener noreferrer" class="pc-btn">GitHub
                 Repo ↗</a>
-              <a href="https://prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="pc-btn">Live Demo
+              <a href="https://prathamm.dpdns.org/projects/sanjaya" target="_blank" rel="noopener noreferrer" class="pc-btn">Live Demo
                 ↗</a>
             </div>
           </div>
@@ -312,7 +356,8 @@
             <div class="pc-btn-row">
               <a href="https://github.com/prathamm-k/VocalNote" target="_blank" rel="noopener noreferrer"
                 class="pc-btn">GitHub Repo ↗</a>
-              <a href="https://prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="pc-btn">Live Demo
+              <a href="https://prathamm.dpdns.org/projects/vocalnote/" target="_blank" rel="noopener noreferrer"
+                class="pc-btn">Live Demo
                 ↗</a>
             </div>
           </div>
@@ -362,7 +407,7 @@
               </p>
             </div>
             <div class="pc-img-box">
-              <img src="assets/Project-3.png" alt="CodeLab Workspace Interface" class="pc-img" loading="lazy"
+              <img src="assets/Project-3-CodeLab.png" alt="CodeLab Workspace Interface" class="pc-img" loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
                 <span>[ CodeLab Workspace Interface ]</span>
@@ -371,7 +416,8 @@
             <div class="pc-btn-row">
               <a href="https://github.com/prathamm-k/CodeLab-Collaborative-Code-Editor" target="_blank"
                 rel="noopener noreferrer" class="pc-btn">GitHub Repo ↗</a>
-              <a href="https://prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="pc-btn">Live Demo
+              <a href="https://prathamm.dpdns.org/projects/codelab/" target="_blank" rel="noopener noreferrer"
+                class="pc-btn">Live Demo
                 ↗</a>
             </div>
           </div>
@@ -423,7 +469,7 @@
                 accessible for 5M+ native speakers.</p>
             </div>
             <div class="pc-img-box">
-              <img src="assets/Project-4.png" alt="Telugu OCR Pipeline" class="pc-img" loading="lazy"
+              <img src="assets/Project-4-Telugu-OCR.png" alt="Telugu OCR Pipeline" class="pc-img" loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
                 <span>[ Telugu OCR Pipeline ]</span>
@@ -432,7 +478,7 @@
             <div class="pc-btn-row">
               <a href="https://github.com/prathamm-k/Telugu-OCR" target="_blank" rel="noopener noreferrer"
                 class="pc-btn">GitHub Repo ↗</a>
-              <a href="https://prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="pc-btn">Live Demo
+              <a href="https://prathamm.dpdns.org/projects/telugu-ocr" target="_blank" rel="noopener noreferrer" class="pc-btn">Live Demo
                 ↗</a>
             </div>
           </div>
@@ -483,7 +529,7 @@
                 troubleshoot equipment — no internet required.</p>
             </div>
             <div class="pc-img-box">
-              <img src="assets/Project-5.png" alt="Belirix Edge Device Deployment" class="pc-img" loading="lazy"
+              <img src="assets/Project-5-Belirix.png" alt="Belirix Edge Device Deployment" class="pc-img" loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="pc-placeholder-img" style="background-color:rgba(13,11,31,0.05); display:none;">
                 <span>[ Belirix Edge Device Deployment ]</span>
@@ -492,7 +538,8 @@
             <div class="pc-btn-row">
               <a href="https://github.com/prathamm-k/Belirix" target="_blank" rel="noopener noreferrer"
                 class="pc-btn">GitHub Repo ↗</a>
-              <a href="https://prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="pc-btn">Live
+              <a href="https://prathamm.dpdns.org/projects/belirix/" target="_blank" rel="noopener noreferrer"
+                class="pc-btn">Live
                 Demo ↗</a>
             </div>
           </div>
@@ -516,7 +563,7 @@
             <div>
               <span class="pcr-label">Tech Stack</span>
               <div class="pcr-chips">
-                <span class="pcr-chip">MiniCPM-V</span>
+                <span class="pcr-chip">MiniCPM-V4.6</span>
                 <span class="pcr-chip">FastAPI</span>
                 <span class="pcr-chip">React</span>
                 <span class="pcr-chip">Docker</span>
