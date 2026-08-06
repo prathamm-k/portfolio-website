@@ -27,6 +27,45 @@
   const isTouch = window.matchMedia("(hover: none)").matches;
 
   if (!isTouch) {
+    /* Detect Chromium engines (Chrome/Edge/Brave/etc.) — only these reliably
+       render SVG url() backdrop-filters; everything else keeps the frost look.
+       Note: Chrome's UA also contains "Safari/537.36", so we must detect
+       positively and only exclude real non-Chromium engines. */
+    const isChromium = (function () {
+      const ua = window.navigator.userAgent.toLowerCase();
+      return /chrome|chromium|crios|edg\//.test(ua) && !/firefox|opr|vivaldi/.test(ua);
+    })();
+
+    /* Build the displacement map for the glass lens (run once at startup) */
+    function initCursorLens() {
+      const mapEl = document.getElementById("cr-lens-map");
+      if (!mapEl || typeof document.createElement("canvas").getContext !== "function") return;
+
+      const size = 64;
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      const img = ctx.createImageData(size, size);
+      for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+          const i = (y * size + x) * 4;
+          // R = normalized x, G = normalized y — 128 at center = no displacement
+          img.data[i] = Math.round((x / (size - 1)) * 255);
+          img.data[i + 1] = Math.round((y / (size - 1)) * 255);
+          img.data[i + 2] = 128;
+          img.data[i + 3] = 255;
+        }
+      }
+      ctx.putImageData(img, 0, 0);
+      mapEl.setAttribute("href", canvas.toDataURL());
+
+      if (isChromium) cr.classList.add("lens-on");
+    }
+    initCursorLens();
+
     /* Track mouse position */
     document.addEventListener("mousemove", (e) => {
       mx = e.clientX;

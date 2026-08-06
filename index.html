@@ -41,6 +41,14 @@
   <div id="cd"></div>
   <div id="cr"></div>
 
+  <!-- Invisible SVG displacement-lens filter for the cursor ring -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="cr-lens" x="0" y="0" width="100%" height="100%">
+      <feImage id="cr-lens-map" href="" result="map" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" />
+      <feDisplacementMap in="SourceGraphic" in2="map" scale="12" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
   <!-- Top scroll-progress bar (spec §4.2) -->
   <div id="pb"></div>
 

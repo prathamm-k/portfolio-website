@@ -93,6 +93,8 @@ a {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background-image: radial-gradient(rgba(245, 242, 236, .14) 1px, transparent 1px);
+  background-size: 26px 26px;
 }
 
 /* Custom cursor elements (positioned but no JS yet) */
@@ -109,16 +111,28 @@ a {
   left: -20px;
 }
 
+/* Frost-glass fallback — applies on all engines, never overridden */
 #cr {
   position: fixed;
-  width: 32px;
-  height: 32px;
-  border: 1.5px solid var(--wd);
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35),
+    0 2px 10px 0 rgba(0, 0, 0, .35);
   z-index: 9998;
   pointer-events: none;
   top: -40px;
   left: -40px;
+  -webkit-backdrop-filter: blur(0.5px) saturate(1.2) brightness(1.05);
+  backdrop-filter: blur(1.3px) saturate(1.2) brightness(1.05);
+}
+
+/* Magnification lens — only enabled on Chromium engines (added via JS) */
+#cr.lens-on {
+  -webkit-backdrop-filter: blur(0.1px) saturate(1.2) brightness(1.05);
+  backdrop-filter: blur(0.1px) saturate(1.2) brightness(1.05) url(#cr-lens);
 }
 
 /* Scroll progress bar */
@@ -202,8 +216,8 @@ section {
 
 /* Cursor hover state — ring grows and goes lime on interactive elements */
 #cr.cursor-hover {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-color: var(--lime);
 }
 
