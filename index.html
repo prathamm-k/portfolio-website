@@ -240,7 +240,7 @@
         <span class="note-spec"><span class="ns-k">RUNTIME</span> Docker · laptop-server</span>
       </div>
 
-      <p class="note-p rv" data-d="3">The domain is free too — claimed through <strong>OceanGate's dpdns service</strong>
+      <p class="note-p rv" data-d="3">The domain is free too — claimed through <strong>DigitalPlat Domains</strong>
         and wired up through Cloudflare's DNS. There's no paid infrastructure anywhere in this stack; it's all
         bootstrapped, tunneled, and maintained by hand.</p>
 
@@ -504,7 +504,7 @@
               <h3 class="pc-title">Telugu-OCR Pipeline</h3>
               <div class="pc-type">Telugu OCR + Fine-Tuned LM</div>
               <p class="pc-one-liner">A from-scratch OCR + LLM pipeline built to make Telugu content digitally
-                accessible for 5M+ native speakers.</p>
+                accessible for Telugu language speakers.</p>
             </div>
             <div class="pc-img-box">
               <img src="assets/Project-4-Telugu-OCR.png" alt="Telugu OCR Pipeline" class="pc-img" loading="lazy"
@@ -524,17 +524,17 @@
             <div>
               <span class="pcr-label">What it does</span>
               <p class="pcr-desc">Built during my ML internship at Swecha, this project pairs a <strong>computer vision
-                  + NLP OCR pipeline</strong> (hitting 91% character accuracy) with Chandamama Kathalu, a fine-tuned
+                  + NLP OCR pipeline</strong> (hitting 71% character accuracy) with Chandamama Kathalu, a fine-tuned
                 Telugu language model. Together they digitized 10,000+ archival documents and expanded digital
                 accessibility for a massively underserved language community.</p>
             </div>
             <div>
               <span class="pcr-label">Key Features</span>
               <ul class="pcr-features">
-                <li>Telugu OCR pipeline using Tesseract + OpenCV, 91% character accuracy</li>
+                <li>Telugu OCR pipeline using Tesseract + OpenCV, 71% character accuracy</li>
                 <li>30% faster throughput over baseline OCR approaches</li>
                 <li>10,000+ archival documents digitized</li>
-                <li>Co-developed fine-tuned Telugu LLM, Chandamama Kathalu, for 5M+ native speakers</li>
+                <li>Co-developed fine-tuned Telugu stories SLM, Chandamama Kathalu, for Telugu language speakers</li>
               </ul>
             </div>
             <div>
@@ -601,7 +601,7 @@
             <div>
               <span class="pcr-label">Tech Stack</span>
               <div class="pcr-chips">
-                <span class="pcr-chip">MiniCPM-V4.6</span>
+                <span class="pcr-chip">VLM</span>
                 <span class="pcr-chip">FastAPI</span>
                 <span class="pcr-chip">React</span>
                 <span class="pcr-chip">Docker</span>
@@ -698,13 +698,12 @@
           <span class="exp-date">Jan 2026 – Apr 2026</span>
         </div>
         <ul class="exp-bullets">
-          <li>Resolved <strong>20+ backend bugs</strong> across 3 Django REST API and microservices modules in a
+          <li>Resolved <strong>backend bugs</strong> across Django REST API and microservices modules in a
             <strong>live enterprise LIMS</strong> serving Cipla, Lupin, Dr. Reddy's, and Biocon, sustaining stability of
             critical manufacturing integrations.
           </li>
           <li>Authored <strong>10+ optimized SQL queries</strong>, <strong>cutting average retrieval time by
-              ~30%</strong>; cleaned 25+ duplicate/rogue entries across SQL and MongoDB stores, improving accuracy for
-            live pharma reporting pipelines.</li>
+              ~30%</strong>; cleaned duplicate/rogue entries across SQL and MongoDB stores, improving reporting accuracy.</li>
         </ul>
         <div class="exp-chips">
           <span class="exp-chip proventech">Django</span>
@@ -726,10 +725,10 @@
         </div>
         <ul class="exp-bullets">
           <li>Built a <strong>computer vision and NLP Telugu OCR pipeline</strong> (Python, Tesseract, OpenCV) hitting
-            <strong>91% character accuracy</strong> and 30% faster throughput; digitized 10,000+ archival documents.
+            <strong>71% character accuracy</strong> and 30% faster throughput; digitized 10,000+ archival documents.
           </li>
-          <li>Co-developed <strong>Chandamama Kathalu</strong>, a fine-tuned Telugu LLM expanding digital accessibility
-            for 5M+ native speakers.</li>
+          <li>Co-developed <strong>Chandamama Kathalu</strong>, a fine-tuned Telugu stories SLM expanding digital accessibility
+            on Telugu language data.</li>
         </ul>
         <div class="exp-chips">
           <span class="exp-chip swecha">Python</span>
@@ -863,6 +862,11 @@
         <div class="hl-tier">MEDIA SERVER</div>
         <h3 class="hl-name">Jellyfin</h3>
         <div class="hl-desc">Personal media library — movies, shows, and music streamed from my own hardware.</div>
+        <div class="hl-demo">
+          <span class="hl-demo-label">DEMO LOGIN</span>
+          <span>user: demo</span>
+          <span>pass: 1234</span>
+        </div>
         <div class="hl-url">jellyfin.prathamm.dpdns.org</div>
       </a>
 
@@ -909,9 +913,63 @@
         </div>
         <div class="hl-tier">MUSIC PLAYER</div>
         <h3 class="hl-name">Feishin</h3>
-        <div class="hl-desc">Self-hosted music client — streams my library from Jellyfin or Navidrome. For a quick look,
-          it's demo / 1234.</div>
+        <div class="hl-desc">Self-hosted music client — streams my library from Jellyfin or Navidrome.</div>
+        <div class="hl-demo">
+          <span class="hl-demo-label">DEMO LOGIN</span>
+          <span>URL Field: https://navidrome.prathamm.dpdns.org</span>
+          <span>user: demo</span>
+          <span>pass: 1234</span>
+        </div>
         <div class="hl-url">music.prathamm.dpdns.org</div>
+      </a>
+
+      <!-- Immich -->
+      <a href="https://photos.prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="hl-card rv" data-d="3"
+        data-hl-check="https://photos.prathamm.dpdns.org/api/server/ping">
+        <div class="hl-top">
+          <span class="hl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="16" rx="2.5" stroke="var(--cyan)" stroke-width="1.6" />
+              <circle cx="9" cy="10" r="1.7" stroke="var(--cyan)" stroke-width="1.6" />
+              <path d="m4 18 5.5-5 3.5 3 3-2.5L20 18" stroke="var(--cyan)" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="hl-status" data-hl-status="immich">
+            <span class="hl-dot"></span>
+            <span class="hl-status-text">Checking…</span>
+          </span>
+        </div>
+        <div class="hl-tier">PHOTO LIBRARY</div>
+        <h3 class="hl-name">Immich</h3>
+        <div class="hl-desc">Self-hosted photo and video backup — my own Google Photos alternative.</div>
+        <div class="hl-demo">
+          <span class="hl-demo-label">DEMO LOGIN</span>
+          <span>user: demo@demo.com</span>
+          <span>pass: 1234</span>
+        </div>
+        <div class="hl-url">photos.prathamm.dpdns.org</div>
+      </a>
+
+      <!-- Uptime Kuma -->
+      <a href="https://status.prathamm.dpdns.org" target="_blank" rel="noopener noreferrer" class="hl-card rv" data-d="4"
+        data-hl-check="https://status.prathamm.dpdns.org/">
+        <div class="hl-top">
+          <span class="hl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 12h4l2.5-6 4 12 2.5-6H22" stroke="var(--cyan)" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="hl-status" data-hl-status="uptimekuma">
+            <span class="hl-dot"></span>
+            <span class="hl-status-text">Checking…</span>
+          </span>
+        </div>
+        <div class="hl-tier">MONITORING</div>
+        <h3 class="hl-name">Uptime Kuma</h3>
+        <div class="hl-desc">Status dashboard that watches every service and container in the homelab and tracks uptime history.</div>
+        <div class="hl-url">status.prathamm.dpdns.org</div>
       </a>
 
       <!-- Pending slot -->

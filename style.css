@@ -2890,3 +2890,23 @@ nav.on {
     min-width: auto;
   }
 }
+
+.hl-demo {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--w);
+  background: rgba(0, 168, 184, .06);
+  border: 1px dashed rgba(0, 168, 184, .35);
+  border-radius: 8px;
+  padding: .6rem .8rem;
+  margin-bottom: .9rem;
+}
+
+.hl-demo-label {
+  font-size: .65rem;
+  letter-spacing: .1em;
+  color: var(--cyan);
+}
